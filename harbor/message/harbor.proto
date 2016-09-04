@@ -1,0 +1,84 @@
+option py_generic_services = false;
+
+message Device {
+	optional int32 id = 1;
+	repeated int32 owners = 2;
+	optional string code = 3;
+	optional string name = 4;
+	optional string type = 5;
+	
+}
+
+message User {
+	optional int32 id= 1;
+	required string username = 2;
+	required string usertype = 3;
+	optional string fullname = 4;
+	optional string email = 5;
+	repeated Device devices = 6;
+}
+
+
+
+message Request {
+	required Cntrl cntrl = 1; 
+	optional string msg = 2;
+	optional RegisterUser registerr = 3;
+	optional LoginUser loginer = 4;
+
+	message LoginUser {
+		required string username = 1;
+		required string password = 2;
+	}
+
+	message RegisterUser {
+		required string username = 1;
+		required string password = 2;
+		optional string email = 3;
+		optional int32 age = 4;
+	}
+
+	enum Cntrl {
+		REGISTER = 0;
+		LOGIN = 1;
+		WORK = 2;
+		LOGOUT = 3;
+	}
+}
+
+message Reply {
+	optional bool success = 1;
+	optional string result = 2;
+	optional string reason = 3;
+	optional User user = 4;
+	optional Device device = 5;	
+
+}
+
+message Store {
+	required string storename = 1;
+	optional string storetype = 2;
+	optional string store_location = 3;
+}
+
+message Stores {
+	repeated Store store = 1;
+}
+
+message Command {
+	required int32 deviceId = 1;
+	optional string msg = 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

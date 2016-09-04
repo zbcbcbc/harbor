@@ -1,0 +1,81 @@
+Project starts on 2013-1-1:
+---------------------------
+Initiated by Bicheng, Zhang.
+Current team members: Yi Lu, XiaoSui Zhang
+
+
+Project Version 0.7 on 2013-2-2:
+-------------------------------
+
+Remarks:
+Remove Harbor Project from svn depository. From now it is an independent 
+project developing under server developer team: Bicheng, Luyi only.
+
+Achieved:
+1. Abscract design, component architecture, interface and adapter.
+2. Service, protocol, factory seperation.
+3. Redis Server.
+4. Inter-server connection stablization.
+5. Command line integration to twistd.
+6. Tac and Tap file enables twisted application and plugin service.
+7. Proxy server on remote computer.
+
+Bugs:
+1. Redis Server close uncleanly.
+2. Protocol buffer non-clean transport when error occurs.
+
+Issues:
+1. Python loops are slow
+2. Dictionary should be replaced by optmized hash tables.
+3. Multiple deferred in the line tends to slow down process.
+4. The protocol buffer is still non-stable, and error-prone.
+5. Preserve logout device state to allow fast re-login
+6. Priviliged connection to avoid frequency factory creaction.
+7. Possible txzmq integration
+
+TODO:
+1. Producer-consumer pattern to open fast-data-transfer channel 
+	between client server and harbor server.
+2. Redis server redesign and database module develop.
+3. Development of worker functions.
+4. Protocol fine-grain tuning.
+5. Unit test, massive client simulation.
+6. Data filtering process at Proxy server.
+7. Request and command handler and pattern. Use q queue to store the request
+8. Login chain: should support multiple login interfaces
+9. Add mediator for user-device controll room
+
+
+
+
+Project Version 0.5 on 2013-1-22:
+---------------------------------
+
+Achieved:
+1. proxy-clientServer-harborServer-device unstable communication
+2. user registeration, login, send command, do work
+3. rpc at clientServer side. But no use for now.
+4. Include txcoroutine, txredis, txMySQLdb
+5. device login
+
+TODO:
+Basic architecture is developed. Fine graining of server is to be done.
+This includes:
+1. Absctract design, component architecture
+2. Varable naming, function naming. Service seperation.
+3. Memeory management, Redis server.
+4. Protocol Buffer re-design.
+5. logging mechanism.
+6. Inter-server connection stablization.
+7. Protocol trimming
+8. Incoming message pre-processing per program
+9. Better command line parsing
+
+Issues:
+1. Python loops are slow!
+2. Dictonary should be replaced by collections type
+3. Group devices by ownerId instead of looking for deviceId by userId
+4. Use interface and adapters to replace redundant code.
+
+
+

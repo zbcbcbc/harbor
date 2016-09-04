@@ -1,0 +1,36 @@
+******************
+THE HARBOR PROJECT
+******************
+ 
+
+The sources code are at server/ directory.
+
+
+Authors
+--------
+Please read AUHTORS.
+
+
+
+Licensing
+---------
+Please read LICENSE.
+
+
+Installing
+----------
+Please read INSTALL
+
+Use
+---
+Run python worker --port
+	python Server --port <worker-port>
+	proxy --port <server-port>
+
+Then use telnet <proxy addr> <proxy port>
+The format of the message should look into how proxy handle & parse incoming
+messages. May vary frequently at development stage
+
+MUST have Mysql installed and have corresponding database suits the project.
+The database document is located at doc/ directory.
+

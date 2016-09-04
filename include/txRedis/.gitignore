@@ -1,0 +1,6 @@
+*.pyc
+*.swp
+*.*.swp
+.*.*.swo
+build/*
+_trial_temp/*

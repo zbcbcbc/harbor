@@ -1,0 +1,18 @@
+Metadata-Version: 1.0
+Name: txredis
+Version: 2.2
+Summary: Python/Twisted client for Redis key-value store
+Home-page: UNKNOWN
+Author: Reza Lotun
+Author-email: rlotun@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: Redis,key-value store,Twisted
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Framework :: Twisted
